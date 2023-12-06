@@ -1,0 +1,351 @@
+/* styles.scss */
+
+body {
+  margin: 0;
+  display: grid;
+  text-align: center;
+  font-family: "MedievalSharp";
+  grid-template:
+    "sidebar-left banner sidebar-right"
+    "sidebar-left appcontent sidebar-right" 
+    "footer footer footer" 50px
+    /20% 60% 20%;
+}
+
+header {
+  grid-area: banner;
+  background-color: #EED06C;
+}
+
+header p {
+  font-size: 28px;
+  margin: 5px;
+  margin-top: 8px;;
+  font-weight: bolder;
+}
+
+#sidebar-left {
+  grid-area: sidebar-left;
+}
+
+#sidebar-right {
+  grid-area: sidebar-right;
+}
+
+#sidebar-right, #sidebar-left {
+  background-color: #293A45;
+}
+
+#appcontent {
+  grid-area: appcontent;
+  background-color: #699894;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #EED06C;
+}
+
+#search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 16px;
+  width: 50%;
+}
+
+
+.search-button {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px
+}
+
+#search-icon {
+  width: 25px;
+  height: 29px;
+}
+
+#home-icon {
+  width: 25px;
+  height: 29px;
+}
+
+#products-table td {
+  height: 100%;
+  width: 50%;
+}
+
+#products-table {
+  width: 100%;
+}
+
+.product-preview-container {
+  width: 70%;
+  height: 100%;
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 10px; 
+  margin: 10px; 
+  background-color: white;
+  cursor: pointer;
+}
+
+.product-preview-label {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 8px; 
+  padding: 8px;
+  cursor: pointer;
+}
+
+.product-preview-image {
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  padding: 5px;
+  border:#293A45;
+  border-width: 2px;
+  border-radius: 10px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.product-preview-rating {
+  max-width: 100%; 
+  height: auto;
+}
+
+#product-article-container {
+  margin: 0;
+  display: grid;
+  text-align: left;
+  grid-template:
+    "article-image article-name" 25%
+    "article-image describtion" 
+    "keywords keywords"
+    "review review"
+    /45% 55%;
+}
+
+#keywords-list {
+  grid-area: keywords;
+  color: #293A45;
+  font:bold;
+  font-style: italic;
+  margin-left: 5%;
+  font-size: 20px;
+  height: 40px;
+}
+
+.product-article-image {
+  grid-area: article-image;
+  width: 400px;
+  height: 400px;
+  margin: 10%;
+  margin-bottom: 4%;
+  border: black;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  padding:2%;
+  background-color: #EED06C;
+}
+
+.product-article-label {
+  grid-area: article-name;
+  font-size: 300%;
+  font-weight: 600;
+  height: 10%;
+  padding-top:8%;
+  padding-bottom:8%;
+  margin: 0px;
+  margin-right: 10%;
+  border-bottom: black;
+  border-width: 0px;
+  border-style: solid;
+  border-bottom-width: 10px;
+}
+
+.product-article-describtion {
+  grid-area: describtion;
+  align-self: flex-start;
+  margin-right: 10%;
+  margin-top: 0%;
+  font-size: 25px;
+  background-color: #fff;
+  padding: 20px;
+  height: 75%;
+  border-radius: 10px;
+  margin-bottom: 4%;
+}
+.product-article-rating {
+  grid-area: review;
+  display: flex;
+  margin-left: 5%;
+  font-size: 25px;
+  height: 40px;
+  align-items: center;
+}
+
+.product-article-rating label {
+  padding-top: 5px;
+}
+
+#product-review-container {
+  padding: 20px;
+  font-size: 50px;
+  text-align: left;
+}
+
+.review {
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 5%;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.reviewer-name {
+  font-weight: bold;
+  padding-left:20px;
+}
+
+.review-time {
+  padding-right:20px;
+}
+
+.review-rating {
+  width: 150px; 
+  height:100%;
+  justify-content: left;
+  text-align: left;
+  padding-left:20px;
+}
+
+.review-content {
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+#reviews-header {
+  display: flex;
+  justify-content: space-between; 
+  border-bottom: black;
+  border-width: 0px;
+  border-style: solid;
+  border-bottom-width: 10px;
+  width:100%;
+  margin: 0px;
+}
+
+#reviews-headline {
+  margin:0px;
+}
+
+.add-review {
+  font-size: 16px;
+  margin:1%;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#add-review-form {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: left;
+}
+
+#add-review-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#new-name,
+#new-rating,
+#new-review-content {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+#new-rating {
+  background-size: cover;
+  cursor: pointer;
+  width: 10%;
+}
+
+#new-review-content {
+  resize: vertical;
+}
+
+#add-review:hover {
+  background-color: #333;
+}
+
+#form-error {
+  font-size: 15px;
+  color: red;
+}
+
+#add-new-weapon-form {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: left;
+}
+
+#add-new-weapon-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#new-weapon-name,
+#new-weapon-image,
+#new-weapon-description {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#new-weapon-description {
+  resize: vertical;
+}
+
+
+
